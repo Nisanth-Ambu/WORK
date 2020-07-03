@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Filter;
 import android.widget.Filterable;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,30 +15,35 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Eadapter extends RecyclerView.Adapter<Eadapter.ExampleViewHolder> implements Filterable {
-    private List<ExampleItem> exampleList;
-    private List<ExampleItem> exampleListFull;
+public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ExampleViewHolder> implements Filterable {
+    private List<BookItem> exampleList;
+    private List<BookItem> exampleListFull;
     private OnItemClickListener mListener;
     public interface  OnItemClickListener{
         void onItemClick(int position);
+        void onCallClick(int position);
+        void onLocateClick(int position);
     }
     public void setOnItemClickListener(OnItemClickListener listener)
     {
         mListener=listener;
     }
     class ExampleViewHolder extends RecyclerView.ViewHolder {
-
         TextView textView1;
         TextView textView2;
         TextView textView3;
-
+ImageView caller;
+ImageView Locator;
+TextView textView4;
         ExampleViewHolder(View itemView, final OnItemClickListener listener) {
             super(itemView);
 
-            textView1 = itemView.findViewById(R.id.txtname);
-            textView2 = itemView.findViewById(R.id.txtlocation);
-            textView3 = itemView.findViewById(R.id.txtph);
-
+            textView1 = itemView.findViewById(R.id.txtNames);
+            textView2 = itemView.findViewById(R.id.txtContact);
+            textView3 = itemView.findViewById(R.id.txtaddresser);
+            textView4=itemView.findViewById(R.id.txtstatus);
+             caller=itemView.findViewById(R.id.recycCalller);
+             Locator=itemView.findViewById(R.id.recycLoca);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -51,10 +57,38 @@ public class Eadapter extends RecyclerView.Adapter<Eadapter.ExampleViewHolder> i
                     }
                 }
             });
+
+            caller.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(listener!=null)
+                    {
+                        int position=getAdapterPosition();
+                        if (position!=RecyclerView.NO_POSITION)
+                        {
+                            listener.onCallClick(position);
+                        }
+                    }
+                }
+            });
+
+            Locator.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(listener!=null)
+                    {
+                        int position=getAdapterPosition();
+                        if (position!=RecyclerView.NO_POSITION)
+                        {
+                            listener.onLocateClick(position);
+                        }
+                    }
+                }
+            });
         }
     }
 
-    Eadapter(List<ExampleItem> exampleList) {
+    BookAdapter(List<BookItem> exampleList) {
         this.exampleList = exampleList;
         exampleListFull = new ArrayList<>(exampleList);
     }
@@ -62,17 +96,27 @@ public class Eadapter extends RecyclerView.Adapter<Eadapter.ExampleViewHolder> i
     @NonNull
     @Override
     public ExampleViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.example_item,
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.book_item,
                 parent, false);
         return new ExampleViewHolder(v,mListener);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ExampleViewHolder holder, int position) {
-        ExampleItem currentItem = exampleList.get(position);
-        holder.textView1.setText(currentItem.getName());
-        holder.textView2.setText(currentItem.getLocation());
-        holder.textView3.setText(currentItem.getPh());
+        BookItem currentItem = exampleList.get(position);
+        holder.textView1.setText(currentItem.getUname());
+        holder.textView2.setText(currentItem.getUcontact());
+        holder.textView4.setText(currentItem.getStatus());
+        String typ=currentItem.getLoctype();
+        if(typ.equals("Other"))
+        {
+            holder.textView3.setText(currentItem.getLocation());
+        }
+        else if(typ.equals("Current"))
+        {
+        holder.Locator.setVisibility(View.VISIBLE);
+        }
+
     }
 
     @Override
@@ -88,12 +132,12 @@ public class Eadapter extends RecyclerView.Adapter<Eadapter.ExampleViewHolder> i
     private Filter exampleFilter = new Filter() {
         @Override
         protected FilterResults performFiltering(CharSequence constraint) {
-            List<ExampleItem> filteredList = new ArrayList<>();
+            List<BookItem> filteredList = new ArrayList<>();
             if (constraint == null || constraint.length() == 0) {
                 filteredList.addAll(exampleListFull);
             } else {
                 String filterPattern = constraint.toString().toLowerCase().trim();
-                for (ExampleItem item : exampleListFull) {
+                for (BookItem item : exampleListFull) {
                     if (item.getLocation().toLowerCase().contains(filterPattern)) {
                         filteredList.add(item);
                     }

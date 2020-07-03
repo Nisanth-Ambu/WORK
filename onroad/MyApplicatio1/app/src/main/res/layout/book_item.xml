@@ -3,43 +3,64 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="5dp">
-    <TextView
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtNames"
-        android:layout_margin="4dp"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtContact"
-        android:layout_below="@+id/txtNames"
-        android:layout_margin="4dp"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtaddresser"
-        android:layout_below="@id/txtContact"
-        android:layout_margin="4dp"/>
-    <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:src="@drawable/call_yellow"
-        android:layout_alignParentRight="true"
-        android:id="@+id/recycCalller"
-        />
+        android:orientation="vertical"
+        android:padding="5dp">
 
+        <TextView
+            android:id="@+id/txtNames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_toLeftOf="@id/recycCalller"/>
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/txtContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtNames"
+            android:layout_margin="4dp"
+            android:layout_toLeftOf="@id/recycCalller"/>
 
+        <TextView
+            android:id="@+id/txtaddresser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtContact"
+            android:layout_margin="4dp"
+            android:layout_toLeftOf="@id/recycCalller"/>
 
+        <ImageView
+            android:id="@+id/recycCalller"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="4dp"
+            android:src="@drawable/call_yellow" />
 
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/recycCalller"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="4dp"
+            android:visibility="invisible"
+            android:src="@drawable/location_marker"
+            android:id="@+id/recycLoca"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtstatus"
+            android:layout_margin="4dp"
+            android:layout_below="@id/recycLoca"
+            />
+
+    </RelativeLayout>
 
 
 </androidx.cardview.widget.CardView>

@@ -115,7 +115,6 @@ public void insertneeded()
 }
 public void RadioSelect(View view)
 {
-
     if(view.getId()==cl.getId())
     {
         if(cl.isChecked())
