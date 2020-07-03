@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/cardviewer"
+    android:layout_marginTop="5dp"
+    android:elevation="10dp"
+    android:stateListAnimator="@animator/needed"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    android:layout_margin="4dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/design_default_color_on_primary">
+
+        <ImageView
+            android:layout_margin="2dp"
+            android:id="@+id/cardico"
+            android:layout_width="103dp"
+            android:layout_height="157dp"
+            android:padding="2dp" />
+
+        <TextView
+            android:id="@+id/cardtext1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="9dp"
+            android:layout_toEndOf="@id/cardico"
+            android:paddingLeft="4dp"
+            android:text="Name"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+<TextView
+    android:id="@+id/txtcard2"
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/cardtext1"
+    android:layout_alignParentTop="true"
+    android:layout_marginStart="21dp"
+    android:layout_marginTop="31dp"
+    android:layout_toEndOf="@id/cardico"
+    android:paddingLeft="4dp"
+    android:text="Discription    :"
+    android:textColor="#252525"
+    android:textSize="15sp"
+
+    />
+
+        <TextView
+            android:id="@+id/cardtext2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardtext1"
+            android:layout_alignParentTop="true"
+
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="31dp"
+            android:layout_toEndOf="@id/txtcard2"
+            android:paddingLeft="4dp"
+            android:text="Blood group"
+            android:textColor="#252525"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/txtcard3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardtext2"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="55dp"
+            android:layout_toEndOf="@id/cardico"
+            android:paddingLeft="4dp"
+            android:text="minimun bid :"
+            android:textColor="#252525"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/cardtext3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardtext2"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="55dp"
+            android:layout_toEndOf="@id/txtcard3"
+            android:paddingLeft="4dp"
+            android:text="Phone number"
+            android:textColor="#252525"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/txtcard4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardtext3"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="78dp"
+            android:layout_toEndOf="@id/cardico"
+            android:paddingLeft="4dp"
+            android:text="Current bid   :"
+            android:textColor="#252525"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/cardtext4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardtext3"
+            android:layout_alignParentTop="true"
+
+            android:layout_marginTop="78dp"
+            android:layout_toEndOf="@id/txtcard4"
+            android:paddingLeft="4dp"
+            android:text="@string/location"
+            android:textColor="#252525"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/txtcard5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardtext4"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="102dp"
+            android:layout_toEndOf="@id/cardico"
+            android:paddingLeft="4dp"
+            android:text="Current buyer :"
+            android:textColor="#252525"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/cardtext5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardtext4"
+            android:layout_alignParentTop="true"
+
+            android:layout_marginTop="102dp"
+            android:layout_toEndOf="@id/txtcard5"
+            android:paddingLeft="4dp"
+            android:text="status"
+            android:textColor="#252525"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/txtcard6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardtext5"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="124dp"
+            android:layout_toEndOf="@id/cardico"
+            android:paddingLeft="4dp"
+            android:text="Bid status    :"
+            android:textColor="#252525"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/cardtext6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardtext5"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="124dp"
+            android:layout_toEndOf="@id/txtcard6"
+            android:paddingLeft="4dp"
+            android:text="status"
+            android:textColor="#252525"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

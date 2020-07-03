@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardviewer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:backgroundTint="@color/design_default_color_on_primary"
+
+    app:cardCornerRadius="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:layout_margin="6dp"
+        android:background="@color/design_default_color_on_primary"
+       android:paddingBottom="10dp"
+     >
+
+
+
+            <ImageView
+                android:id="@+id/cardico"
+                android:layout_width="154dp"
+                android:layout_height="201dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/cardtext2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="10dp"
+
+            android:paddingLeft="4dp"
+            android:text="Blood group"
+            android:textColor="#252525"
+            android:textSize="15sp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.008"
+            app:layout_constraintStart_toEndOf="@+id/txtcard2"
+            app:layout_constraintTop_toBottomOf="@+id/cardtext1" />
+
+        <TextView
+            android:id="@+id/cardtext3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardtext2"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@id/txtcard3"
+            android:paddingLeft="4dp"
+            android:text="Phone number"
+            android:textColor="#252525"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.01"
+            app:layout_constraintStart_toEndOf="@+id/txtcard3"
+            app:layout_constraintTop_toBottomOf="@+id/cardtext2" />
+
+        <TextView
+            android:id="@+id/cardtext1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/cardico"
+            android:paddingLeft="4dp"
+            android:text="Name"
+            android:textColor="#000000"
+            android:textSize="20sp"
+
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardico" />
+
+        <TextView
+            android:id="@+id/txtcard2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardtext1"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="4dp"
+
+            android:paddingLeft="4dp"
+            android:text="Discription    :"
+
+            android:textColor="#252525"
+            android:textSize="15sp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.325"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardtext1" />
+
+        <TextView
+            android:id="@+id/txtcard3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardtext2"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="4dp"
+
+            android:paddingLeft="4dp"
+            android:text="minimun bid :"
+            android:textColor="#252525"
+            android:textSize="15sp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.327"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardtext2" />
+
+        <TextView
+            android:id="@+id/txtcard5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardtext4"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="4dp"
+            android:paddingLeft="4dp"
+            android:text="Current buyer :"
+            android:textColor="#252525"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.312"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardtext4" />
+
+        <TextView
+            android:id="@+id/txtcard6"
+            android:layout_width="91dp"
+            android:layout_height="21dp"
+            android:layout_below="@id/cardtext5"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="4dp"
+            android:paddingLeft="4dp"
+            android:text="Bid status    :"
+            android:textColor="#252525"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.336"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardtext5" />
+
+        <TextView
+            android:id="@+id/txtcard4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardtext3"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="4dp"
+
+            android:paddingLeft="4dp"
+            android:text="Current bid   :"
+            android:textColor="#252525"
+
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.33"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardtext3" />
+
+        <TextView
+            android:id="@+id/cardtext4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardtext3"
+            android:layout_alignParentTop="true"
+
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@id/txtcard4"
+            android:paddingLeft="4dp"
+            android:text="@string/location"
+            android:textColor="#252525"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/txtcard4"
+            app:layout_constraintTop_toBottomOf="@+id/cardtext3" />
+
+        <TextView
+            android:id="@+id/cardtext5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardtext4"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="9dp"
+            android:layout_toEndOf="@id/txtcard5"
+            android:paddingLeft="4dp"
+            android:text="status"
+            android:textColor="#252525"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/txtcard5"
+            app:layout_constraintTop_toBottomOf="@+id/cardtext4" />
+
+        <TextView
+            android:id="@+id/cardtext6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardtext5"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@id/txtcard6"
+            android:paddingLeft="4dp"
+            android:text="status"
+            android:textColor="#252525"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/txtcard6"
+            app:layout_constraintTop_toBottomOf="@+id/cardtext5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:theme="@style/Theme.AppCompat.Dialog.Alert"
+    android:paddingLeft="30dp"
+
+    android:paddingRight="30dp"
+    tools:context=".CallForBlood">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/btnbkgd"
+        android:elevation="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cornerRadius="6dp"
+        android:gravity="center_horizontal"
+
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="do you want to call this person..?"
+            android:lines="1"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/colorAccent"
+            />
+        <Button
+            android:id="@+id/yess"
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/btnbkgd"
+            android:elevation="20dp"
+            android:text="Call"
+            android:textColor="@color/textclor"/>
+        <Button
+            android:id="@+id/nooo"
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/btnbkgd"
+            android:elevation="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@id/yess"
+            android:text="Cancel"
+
+            android:textColor="@color/textclor"/>
+    </RelativeLayout>
+</RelativeLayout>

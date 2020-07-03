@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">test</string>
+    <string-array name="numbers">
+        <item>shop</item>
+        <item>user</item>
+    </string-array>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="title_activity_sign_up">SignUpActivity</string>
+</resources>
